@@ -29,3 +29,11 @@
 
 ## 文本相似度(sentence similarty)
 [详情](https://github.com/yyhchen/NLP_Task/tree/main/sentence_similarity)
+
+
+<br>
+<br>
+
+
+## 文本摘要(text summarization)
+[详情](https://github.com/yyhchen/NLP_Task/tree/main/text_summarization)
