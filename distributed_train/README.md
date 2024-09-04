@@ -73,3 +73,25 @@ accelerate launch ddp_accelerate.py
 
 
 当然，我们在方法二的效果图上可以看到有一些 `accelerate launch` 的一些警告，是关于 `accelerate config` 的内容，也就是需要指定 启动的配置参数，如果默认就会出现这些警告，可以通过 启动 `accelerate config` 配置内容消除警告
+
+
+<br>
+<br>
+
+
+### accelerate advanced ddp
+
+加入了 梯度累积，混合精度，实验记录，模型保存，断点续训的功能
+
+[ddp_accelerate_advanced.py](/distributed_train/distributed_data_parallel/ddp_accelerate_advanced.py)
+
+**执行方法:**
+
+```bash
+accelerate launch --mixed_precision bf16 ddp_accelerate_advanced.py 
+```
+
+**效果图如下:**
+![accelerate ddp_accelerate](/assets/ddp_accelerate_advanced_result.png)
+
+> tensorboard 功能可以通过 `command + shift + p` 输入 `tensorboard` 打开
