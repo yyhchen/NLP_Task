@@ -1,0 +1,25 @@
+## 参考官网进行修改, 使用 deepspeed config file 执行 stage2 (zero2)
+compute_environment: LOCAL_MACHINE
+debug: false
+deepspeed_config:
+  # gradient_accumulation_steps: 1
+  # offload_optimizer_device: none
+  # offload_param_device: none
+  # zero3_init_flag: false
+  # zero_stage: 2
+  deepspeed_config_file: zero_stage3_config.json  # +, deepspeed config 写在这个文件里
+  zero3_init_flag: false  # +
+distributed_type: DEEPSPEED
+downcast_bf16: 'no'
+enable_cpu_affinity: false
+machine_rank: 0
+main_training_function: main
+# mixed_precision: bf16   # 指定了 deepspeed_config_file 就不能指定 这个参数
+num_machines: 1
+num_processes: 2
+rdzv_backend: static
+same_network: true
+tpu_env: []
+tpu_use_cluster: false
+tpu_use_sudo: false
+use_cpu: false
