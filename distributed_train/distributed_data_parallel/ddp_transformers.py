@@ -40,6 +40,7 @@ train_args = TrainingArguments(output_dir="./checkpoints",      # 输出文件�
                                evaluation_strategy="epoch",     # 评估策略
                                save_strategy="epoch",           # 保存策略
                                save_total_limit=3,              # 最大保存数
+                               bf16=True,
                                learning_rate=2e-5,              # 学习率
                                weight_decay=0.01,               # weight_decay
                                metric_for_best_model="f1",      # 设定评估指标
